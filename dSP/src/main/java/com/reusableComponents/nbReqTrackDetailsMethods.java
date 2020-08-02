@@ -12,7 +12,9 @@ import reusableMethods.Utilities;
 
 public class nbReqTrackDetailsMethods extends base {
 
+	nbReqTrackDetails nbReqTrackObj = new nbReqTrackDetails(driver);
 	
+	Xls_Reader objTestData = new Xls_Reader(".\\src\\main\\java\\com\\testdata\\TestDataForExecution.xlsx");
 	
 	public WebDriver clearTime(WebDriver driver) {
 
@@ -23,24 +25,28 @@ public class nbReqTrackDetailsMethods extends base {
 
 	}
 
-	public WebDriver searchWithNBOrderID(WebDriver driver) {
-
+	public WebDriver searchWithNBOrderID(WebDriver driver, int row) throws InterruptedException {
+		
 		Xls_Reader inputValues = new Xls_Reader(
 				".\\src\\main\\java\\com\\testdata\\InputValuesForDSP.xlsx");
 
 		nbReqTrackDetails nbReqTrackObj = new nbReqTrackDetails(driver);
 		Utilities.highlight(nbReqTrackObj.getNBOrderID());
 		nbReqTrackObj.getNBOrderID().clear();
-		nbReqTrackObj.getNBOrderID().sendKeys(inputValues.getCellData("NBReqResp", "detail", 2));
+		//nbReqTrackObj.getNBOrderID().sendKeys(inputValues.getCellData("NBReqResp", "detail", 2));
+		nbReqTrackObj.getNBOrderID().sendKeys(objTestData.getCellData("TestCaseData", "NBOrderID", row));
+		Utilities.highlight(nbReqTrackObj.getSearchBtn());
+		nbReqTrackObj.getSearchBtn().click();
+		Thread.sleep(5000);
 		Utilities.highlight(nbReqTrackObj.getSearchBtn());
 		nbReqTrackObj.getSearchBtn().click();
 		return driver;
 
 	}
 
-	public WebDriver verifyStatusAsCompleted(WebDriver driver) {
+	public WebDriver verifyStatusAsCompleted(WebDriver driver) throws InterruptedException {
 
-		nbReqTrackDetails nbReqTrackObj = new nbReqTrackDetails(driver);
+		Thread.sleep(3000);
 		Utilities.highlight(nbReqTrackObj.getStatus());
 		String statusNBReq = nbReqTrackObj.getStatus().getText();
 		Assert.assertEquals("Completed", statusNBReq);
@@ -48,24 +54,29 @@ public class nbReqTrackDetailsMethods extends base {
 
 	}
 
-	public WebDriver searchWithServiceOrderID(WebDriver driver) {
+	public WebDriver searchWithServiceOrderID(WebDriver driver) throws InterruptedException {
 
 		Xls_Reader inputValues = new Xls_Reader(
 				".\\src\\main\\java\\com\\testdata\\InputValuesForDSP.xlsx");
 
-		nbReqTrackDetails nbReqTrackObj = new nbReqTrackDetails(driver);
+		
 		Utilities.highlight(nbReqTrackObj.getServiceOrderID());
 		nbReqTrackObj.getServiceOrderID().clear();
 		nbReqTrackObj.getServiceOrderID().sendKeys(inputValues.getCellData("NBReqResp", "detail", 3));
 		Utilities.highlight(nbReqTrackObj.getSearchBtn());
 		nbReqTrackObj.getSearchBtn().click();
+		Thread.sleep(5000);
+		Utilities.highlight(nbReqTrackObj.getSearchBtn());
+		nbReqTrackObj.getSearchBtn().click();
 		return driver;
 
 	}
+	
+	
 
-	public WebDriver verifyDelveryStatusAsCompleted(WebDriver driver) {
+	public WebDriver verifyDelveryStatusAsCompleted(WebDriver driver) throws InterruptedException {
 
-		nbReqTrackDetails nbReqTrackObj = new nbReqTrackDetails(driver);
+		Thread.sleep(3000);
 		Utilities.highlight(nbReqTrackObj.getDeliveryStatus());
 		String deliveryStatusNBReq = nbReqTrackObj.getDeliveryStatus().getText();
 		Assert.assertEquals("Completed", deliveryStatusNBReq);
@@ -73,9 +84,9 @@ public class nbReqTrackDetailsMethods extends base {
 
 	}
 
-	public WebDriver verifyStatusAsFailed(WebDriver driver) {
-
-		nbReqTrackDetails nbReqTrackObj = new nbReqTrackDetails(driver);
+	public WebDriver verifyStatusAsFailed(WebDriver driver) throws InterruptedException {
+		
+		Thread.sleep(3000);
 		Utilities.highlight(nbReqTrackObj.getStatus());
 		String statusNBReq = nbReqTrackObj.getStatus().getText();
 		Assert.assertEquals("Failed", statusNBReq);
@@ -83,9 +94,9 @@ public class nbReqTrackDetailsMethods extends base {
 
 	}
 
-	public WebDriver verifyStatusAsRejected(WebDriver driver) {
+	public WebDriver verifyStatusAsRejected(WebDriver driver) throws InterruptedException {
 
-		nbReqTrackDetails nbReqTrackObj = new nbReqTrackDetails(driver);
+		Thread.sleep(3000);
 		Utilities.highlight(nbReqTrackObj.getStatus());
 		String statusNBReq = nbReqTrackObj.getStatus().getText();
 		Assert.assertEquals("Rejected", statusNBReq);
@@ -93,9 +104,9 @@ public class nbReqTrackDetailsMethods extends base {
 
 	}
 
-	public WebDriver verifyStatusAsNonCreated(WebDriver driver) {
+	public WebDriver verifyStatusAsNonCreated(WebDriver driver) throws InterruptedException {
 
-		nbReqTrackDetails nbReqTrackObj = new nbReqTrackDetails(driver);
+		Thread.sleep(3000);
 		Utilities.highlight(nbReqTrackObj.getStatus());
 		String statusNBReq = nbReqTrackObj.getStatus().getText();
 		Assert.assertEquals("Non Created", statusNBReq);
@@ -103,9 +114,9 @@ public class nbReqTrackDetailsMethods extends base {
 
 	}
 
-	public WebDriver verifyStatusAsInProgress(WebDriver driver) {
+	public WebDriver verifyStatusAsInProgress(WebDriver driver) throws InterruptedException {
 
-		nbReqTrackDetails nbReqTrackObj = new nbReqTrackDetails(driver);
+		Thread.sleep(3000);
 		Utilities.highlight(nbReqTrackObj.getStatus());
 		String statusNBReq = nbReqTrackObj.getStatus().getText();
 		Assert.assertEquals("In Progress", statusNBReq);

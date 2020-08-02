@@ -31,5 +31,27 @@ public class ExecutionNav extends base {
 		eP.getInvokeNonCreatedNBOrders().click();
 		return driver;
 	}
+	
+	public WebDriver navigateToNBSimulators(WebDriver driver) throws InterruptedException {
+
+		ExecutionPage eP = new ExecutionPage(driver);
+		Actions action = new Actions(driver);
+		Utilities.highlight(eP.getNBSimulatorMainMenu());
+		action.moveToElement(eP.getNBSimulatorMainMenu()).build().perform();
+		Utilities.highlight(eP.getNBSImulatorOption());
+		eP.getNBSImulatorOption().click();
+		return driver;
+	}
+	
+	public WebDriver navigateToInvokeNonCreatedNBOrders(WebDriver driver) throws InterruptedException {
+
+		ExecutionPage eP = new ExecutionPage(driver);
+		Actions action = new Actions(driver);
+		Utilities.highlight(eP.getManageNonCreatedOrders());
+		action.moveToElement(eP.getManageNonCreatedOrders()).build().perform();
+		Utilities.highlight(eP.getInvokeNonCreatedNBOrders());
+		eP.getInvokeNonCreatedNBOrders().click();
+		return driver;
+	}
 
 }

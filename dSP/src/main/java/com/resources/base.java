@@ -1,7 +1,12 @@
 package com.resources;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import com.excel.utility.Xls_Reader;
@@ -10,16 +15,19 @@ import com.excel.utility.Xls_Reader;
 public class base {
 
 	protected static WebDriver driver;
+	
+	public void failed(WebDriver driver) {
+		File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		try {
+			FileUtils.copyFile(srcFile, new File(".\\screenshots"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
 
 	public WebDriver initializer() throws IOException, InterruptedException {
-
-		/*
-		 * Properties prop = new Properties(); FileInputStream fis = new
-		 * FileInputStream("C:\\Vir@l's Data\\Profesional\\dSP_E2E_Test Cases\\dSP\\src\\main\\java\\E2ETestCases\\dSP\\data.properties"
-		 * );
-		 * 
-		 * prop.load(fis); String browser = prop.getProperty("browser");
-		 */
 
 		Xls_Reader readerLaunch = new Xls_Reader(
 				".\\src\\main\\java\\com\\testdata\\dataForDspNGT.xlsx");

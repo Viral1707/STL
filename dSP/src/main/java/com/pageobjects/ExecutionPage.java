@@ -44,4 +44,20 @@ public class ExecutionPage extends base {
 		return driver.findElement(invokeNonCreatedNBOrders);
 	}
 
+	By NBSimulatorMainMenu = By.xpath(readerXpath.getCellData("Execution", "detail", 9));
+
+	public WebElement getNBSimulatorMainMenu() {
+		return driver.findElement(NBSimulatorMainMenu);
+	}
+	
+	By NBSImulatorOption = By.xpath(readerXpath.getCellData("Execution", "detail", 10));
+
+	public WebElement getNBSImulatorOption() {
+		return driver.findElement(NBSImulatorOption);
+	}
+	
+	By ManageNonCreatedOrders = By.xpath(readerXpath.getCellData("Execution", "detail", 10));
+
+	
+	
 }

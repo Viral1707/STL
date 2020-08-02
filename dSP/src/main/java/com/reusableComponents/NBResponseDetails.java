@@ -32,5 +32,7 @@ public class NBResponseDetails extends base {
 		return driver;
 
 	}
+	
+	
 
 }

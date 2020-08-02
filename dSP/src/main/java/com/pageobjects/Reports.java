@@ -31,5 +31,11 @@ public class Reports extends base {
 	public WebElement getNbReqRespTrack() {
 		return driver.findElement(nbReqRespTrack);
 	}
+	
+	By nbReqTrackingDetails = By.xpath(readerXpath.getCellData("reports", "detail", 4));
+
+	public WebElement getNbReqTrackDetails() {
+		return driver.findElement(nbReqTrackingDetails);
+	}
 
 }
