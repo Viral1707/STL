@@ -2,34 +2,34 @@
 <testng-results skipped="0" failed="1" ignored="43" total="44" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="123212" started-at="2020-07-30T14:02:14 IST" finished-at="2020-07-30T14:04:17 IST">
+  <suite name="Suite" duration-ms="44725" started-at="2020-08-02T20:11:44 IST" finished-at="2020-08-02T20:12:29 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="123212" started-at="2020-07-30T14:02:14 IST" finished-at="2020-07-30T14:04:17 IST">
+    <test name="Test" duration-ms="44725" started-at="2020-08-02T20:11:44 IST" finished-at="2020-08-02T20:12:29 IST">
       <class name="E2ETestCases.dSP.regression">
-        <test-method status="FAIL" signature="FailedOrderexecutionSingleCommand_InvalidCommandURL_XMLDevice()[pri:7, instance:E2ETestCases.dSP.regression@45385f75]" name="FailedOrderexecutionSingleCommand_InvalidCommandURL_XMLDevice" duration-ms="122082" started-at="2020-07-30T14:02:15 IST" finished-at="2020-07-30T14:04:17 IST">
+        <test-method status="FAIL" signature="SuccessfulOrderexecutionSingleCommand_XMLRequest()[pri:1, instance:E2ETestCases.dSP.regression@2f67a4d3]" name="SuccessfulOrderexecutionSingleCommand_XMLRequest" duration-ms="43587" started-at="2020-08-02T20:11:45 IST" description="TestOne_TestNGProject" finished-at="2020-08-02T20:12:28 IST">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"(//*[text()='OK'])"}
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//input[@name="txtUsername"]"}
   (Session info: chrome=79.0.3945.88)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-81BPFCL', ip: '10.212.136.14', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+System info: host: 'DESKTOP-81BPFCL', ip: '192.168.0.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\Viral\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:49318}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 42a2442d3df1ecf6225d844387a786ec
-*** Element info: {Using=xpath, value=(//*[text()='OK'])}]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\Viral\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:60183}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 9c6ffd7416e4f0f820ce711200855536
+*** Element info: {Using=xpath, value=//input[@name="txtUsername"]}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//*[text()='OK'])"}
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@name="txtUsername"]"}
   (Session info: chrome=79.0.3945.88)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-81BPFCL', ip: '10.212.136.14', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+System info: host: 'DESKTOP-81BPFCL', ip: '192.168.0.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\Viral\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:49318}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 42a2442d3df1ecf6225d844387a786ec
-*** Element info: {Using=xpath, value=(//*[text()='OK'])}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\Viral\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:60183}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 9c6ffd7416e4f0f820ce711200855536
+*** Element info: {Using=xpath, value=//input[@name="txtUsername"]}
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -44,9 +44,9 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at com.pageobjects.CommandListPage.getOKBtn(CommandListPage.java:93)
-at com.reusableComponents.CommandListMethods.activateReactivateCommand(CommandListMethods.java:88)
-at E2ETestCases.dSP.regression.FailedOrderexecutionSingleCommand_InvalidCommandURL_XMLDevice(regression.java:299)
+at com.pageobjects.LoginPage.getUsername(LoginPage.java:26)
+at reusableMethods.Utilities.loginMethod(Utilities.java:36)
+at E2ETestCases.dSP.regression.SuccessfulOrderexecutionSingleCommand_XMLRequest(regression.java:65)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -80,8 +80,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- FailedOrderexecutionSingleCommand_InvalidCommandURL_XMLDevice -->
+        </test-method> <!-- SuccessfulOrderexecutionSingleCommand_XMLRequest -->
       </class> <!-- E2ETestCases.dSP.regression -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

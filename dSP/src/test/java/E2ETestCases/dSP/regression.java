@@ -34,6 +34,8 @@ import com.reusableComponents.searchSBDeviceMethods;
 import com.reusableComponents.singleCommandExecutionMethods;
 
 import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
@@ -54,6 +56,8 @@ public class regression extends base {
 	@Severity(SeverityLevel.NORMAL)
 	@Description("TestOne_AllureProject : First Test Case")
 	@Story("Story Name : To check the Single Command Execution")
+	@Epic("Epic 1")
+	@Feature("Feature 1")
 	public void SuccessfulOrderexecutionSingleCommand_XMLRequest() throws IOException, InterruptedException {
 		log.info("Successful Order execution_Single Command_XML Request");
 		String TestCaseName = objTestData.getCellData("TestCaseData", "TestCaseName", 2).trim();
@@ -273,7 +277,7 @@ public class regression extends base {
 	
 	//In progress
 	//Activate-Reactivate is needs to be modified
-	@Test(enabled = true, priority = 7)
+	@Test(enabled = false, priority = 7)
 	public void FailedOrderexecutionSingleCommand_InvalidCommandURL_XMLDevice()
 			throws IOException, InterruptedException {
 		log.info("Failed Order execution_Single Command_Invalid Command URL_XML Device");

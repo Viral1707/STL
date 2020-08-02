@@ -8,8 +8,7 @@
     <classes>
       <class name="E2ETestCases.dSP.regression">
         <methods>
-          <include name="TestSingleCommandInvocation2"/>
-          <include name="TestSingleCommandInvocation3"/>
+          <include name="SuccessfulOrderexecutionSingleCommand_XMLRequest"/>
         </methods>
       </class> <!-- E2ETestCases.dSP.regression -->
     </classes>

@@ -10,6 +10,8 @@ import reusableMethods.Utilities;
 
 public class HomepageNav extends base {
 
+	
+	@Step("Navigation to Reports")
 	public WebDriver navigateToReports(WebDriver driver) {
 
 		HomePage hp = new HomePage(driver);
@@ -19,6 +21,7 @@ public class HomepageNav extends base {
 
 	}
 
+	@Step("Navigation to Configuration")
 	public WebDriver navigateToConfiguration(WebDriver driver) {
 
 		HomePage hp = new HomePage(driver);
@@ -28,6 +31,7 @@ public class HomepageNav extends base {
 
 	}
 
+	
 	@Step("Navigate to Execution")
 	public WebDriver navigateToExecution(WebDriver driver) throws InterruptedException {
 
