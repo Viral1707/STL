@@ -35,7 +35,6 @@ public class ServiceOrderPageMethods extends base {
 		Thread.sleep(5000);
 		Utilities.highlight(objServiceOrderDetailsPage.getServiceOrderStatus());
 		String statusServiceOrder = objServiceOrderDetailsPage.getServiceOrderStatus().getText();
-		System.out.println("Status" + statusServiceOrder);
 		Assert.assertEquals("Completed", statusServiceOrder);
 		return driver;
 
@@ -61,9 +60,11 @@ public class ServiceOrderPageMethods extends base {
 		
 		Utilities.highlight(objServiceOrderDetailsPage.getNBOrderID());
 		objServiceOrderDetailsPage.getNBOrderID().sendKeys("");
+		Utilities.highlight(objServiceOrderDetailsPage.getSearchBtn());
 		objServiceOrderDetailsPage.getSearchBtn().click();
 		Thread.sleep(5000);
 		Actions actions = new Actions(driver);
+		Utilities.highlight(objServiceOrderDetailsPage.getSearchedNBOrderID());
 		actions.doubleClick(objServiceOrderDetailsPage.getSearchedNBOrderID()).perform();
 		
 		return driver;

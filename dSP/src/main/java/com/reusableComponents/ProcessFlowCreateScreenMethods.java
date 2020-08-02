@@ -18,35 +18,13 @@ public class ProcessFlowCreateScreenMethods extends base {
 	Xls_Reader collectValues = new Xls_Reader(
 			".\\src\\main\\java\\com\\testdata\\CollectedValuesForDSP.xlsx");
 
-	Xls_Reader abc = new Xls_Reader(
-			".\\src\\main\\java\\com\\testdata\\TCsSingleCommandExecution.xlsx");
+	Xls_Reader objTestData = new Xls_Reader(
+			".\\src\\main\\java\\com\\testdata\\TestDataForExecution.xlsx");
 
 	ServiceOrder objServiceOrder = new ServiceOrder(driver);
 	ProcessFlowCreateScreen objPFCS = new ProcessFlowCreateScreen(driver);
 
-	public WebDriver provideInputFields(WebDriver driver, String TestCaseName) throws InterruptedException {
-
-		int row = 1;
-
-		if (TestCaseName.equalsIgnoreCase(abc.getCellData("TestCasesData", "TestCaseName", 2))) {
-			row = 2;
-		} else if (TestCaseName.equalsIgnoreCase(abc.getCellData("TestCasesData", "TestCaseName", 3))) {
-			row = 3;
-		} else if (TestCaseName.equalsIgnoreCase(abc.getCellData("TestCasesData", "TestCaseName", 4))) {
-			row = 4;
-		} else if (TestCaseName.equalsIgnoreCase(abc.getCellData("TestCasesData", "TestCaseName", 5))) {
-			row = 5;
-		} else if (TestCaseName.equalsIgnoreCase(abc.getCellData("TestCasesData", "TestCaseName", 6))) {
-			row = 6;
-		} else if (TestCaseName.equalsIgnoreCase(abc.getCellData("TestCasesData", "TestCaseName", 7))) {
-			row = 7;
-		} else if (TestCaseName.equalsIgnoreCase(abc.getCellData("TestCasesData", "TestCaseName", 8))) {
-			row = 8;
-		} else if (TestCaseName.equalsIgnoreCase(abc.getCellData("TestCasesData", "TestCaseName", 9))) {
-			row = 9;
-		}
-
-		
+	public WebDriver provideInputFields(WebDriver driver, int row) throws InterruptedException {
 
 		List<WebElement> lable = objPFCS.getInputFieldsLable();
 		List<WebElement> lableValue = objPFCS.getInputFieldsValue();
@@ -54,7 +32,7 @@ public class ProcessFlowCreateScreenMethods extends base {
 		for (z = 0; z < lable.size(); z++) {
 			Utilities.highlight(lableValue.get(z));
 			String lable_name = lable.get(z).getText().trim();
-			lableValue.get(z).sendKeys(abc.getCellData("TestCasesData", lable_name, row));
+			lableValue.get(z).sendKeys(objTestData.getCellData("TestCaseData", lable_name, row));
 		}
 
 		return driver;

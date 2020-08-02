@@ -14,6 +14,8 @@ public class ProRequestMethods extends base {
 
 	Xls_Reader inputValues = new Xls_Reader(
 			".\\src\\main\\java\\com\\testdata\\InputValuesForDSP.xlsx");
+	
+	Xls_Reader objTestData = new Xls_Reader(".\\src\\main\\java\\com\\testdata\\TestDataForExecution.xlsx");
 
 	public WebDriver verifyProReqRespStatusAsProcessed(WebDriver driver) {
 
@@ -45,12 +47,12 @@ public class ProRequestMethods extends base {
 
 	}
 
-	public WebDriver verifyProReqRespStatusAsDeviceCommunicationfailure(WebDriver driver) {
+	public WebDriver verifyProReqRespStatusAsDeviceCommunicationfailure(WebDriver driver, int row) {
 
 		ProvisioningReqPage objProReqPage = new ProvisioningReqPage(driver);
 		Utilities.highlight(objProReqPage.getProReqStatus());
 		String statusProReq = objProReqPage.getProReqStatus().getText();
-		Assert.assertEquals(inputValues.getCellData("ProRequest", "detail", 5), statusProReq);
+		Assert.assertEquals(statusProReq,objTestData.getCellData("TestCaseData", "ProvisioningRequestStatus", row));
 		return driver;
 
 	}

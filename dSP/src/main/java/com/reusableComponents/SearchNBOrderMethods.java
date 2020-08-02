@@ -17,8 +17,8 @@ public class SearchNBOrderMethods extends base {
 	Xls_Reader collectValues = new Xls_Reader(
 			".\\src\\main\\java\\com\\testdata\\CollectedValuesForDSP.xlsx");
 
-	Xls_Reader abc = new Xls_Reader(
-			".\\src\\main\\java\\com\\testdata\\TCsSingleCommandExecution.xlsx");
+	Xls_Reader objTestData = new Xls_Reader(
+			".\\src\\main\\java\\com\\testdata\\TestDataForExecution.xlsx");
 
 	SearchNBOrder objSNBO = new SearchNBOrder(driver);
 
@@ -44,33 +44,12 @@ public class SearchNBOrderMethods extends base {
 
 	}
 	
-	public WebDriver verifyProvisioningResponseCode(WebDriver driver, String TestCaseName) throws InterruptedException {
-		
-		
-		int row = 1;
-
-		if (TestCaseName.equalsIgnoreCase(abc.getCellData("TestCasesData", "TestCaseName", 2))) {
-			row = 2;
-		} else if (TestCaseName.equalsIgnoreCase(abc.getCellData("TestCasesData", "TestCaseName", 3))) {
-			row = 3;
-		} else if (TestCaseName.equalsIgnoreCase(abc.getCellData("TestCasesData", "TestCaseName", 4))) {
-			row = 4;
-		} else if (TestCaseName.equalsIgnoreCase(abc.getCellData("TestCasesData", "TestCaseName", 5))) {
-			row = 5;
-		} else if (TestCaseName.equalsIgnoreCase(abc.getCellData("TestCasesData", "TestCaseName", 6))) {
-			row = 6;
-		} else if (TestCaseName.equalsIgnoreCase(abc.getCellData("TestCasesData", "TestCaseName", 7))) {
-			row = 7;
-		} else if (TestCaseName.equalsIgnoreCase(abc.getCellData("TestCasesData", "TestCaseName", 8))) {
-			row = 8;
-		} else if (TestCaseName.equalsIgnoreCase(abc.getCellData("TestCasesData", "TestCaseName", 9))) {
-			row = 9;
-		}
-
+	public WebDriver verifyProvisioningResponseCode(WebDriver driver, int row) throws InterruptedException {
+	
 		Utilities.highlight(objSODSP.getStatusProvisioningResponse());
 		String statusProvisioningResponse = objSODSP.getStatusProvisioningResponse().getText();
 		System.out.println(statusProvisioningResponse);
-		Assert.assertEquals(statusProvisioningResponse, abc.getCellData("TestCasesData", "statusProvisioningResponse", row));
+		Assert.assertEquals(statusProvisioningResponse, objTestData.getCellData("TestCaseData", "statusProvisioningResponse", row));
 		return driver;
 
 	}
