@@ -42,10 +42,16 @@ public class Utilities extends base {
 		Utilities.highlight(lp.getLoginBtn());
 		lp.getLoginBtn().click();
 		log.info("Login successfully");
+		
+		
+		
 		//log.warn("This is just a warning");
 		//log.fatal("This is just a fatal message");
 		//log.error("This is just a error message");
 		//log.debug("This is just a debug message");
+		
+		
+		
 		return driver;
 
 	}
@@ -68,6 +74,106 @@ public class Utilities extends base {
     }
 	
 	
+	
+	Xls_Reader objTestData = new Xls_Reader(".\\src\\main\\java\\com\\testdata\\TestDataForExecution.xlsx");
+	
+public int findRowForTestData(WebDriver driver, String TestCaseName) {
+		
+		int rowTestData = 1;
+
+		if (TestCaseName.equalsIgnoreCase(objTestData.getCellData("TestCaseData", "TestCaseName", 2))) {
+			rowTestData = 2;
+		} else if (TestCaseName.equalsIgnoreCase(objTestData.getCellData("TestCaseData", "TestCaseName", 3))) {
+			rowTestData = 3;
+		} else if (TestCaseName.equalsIgnoreCase(objTestData.getCellData("TestCaseData", "TestCaseName", 4))) {
+			rowTestData = 4;
+		} else if (TestCaseName.equalsIgnoreCase(objTestData.getCellData("TestCaseData", "TestCaseName", 5))) {
+			rowTestData = 5;
+		} else if (TestCaseName.equalsIgnoreCase(objTestData.getCellData("TestCaseData", "TestCaseName", 6))) {
+			rowTestData = 6;
+		} else if (TestCaseName.equalsIgnoreCase(objTestData.getCellData("TestCaseData", "TestCaseName", 7))) {
+			rowTestData = 7;
+		} else if (TestCaseName.equalsIgnoreCase(objTestData.getCellData("TestCaseData", "TestCaseName", 8))) {
+			rowTestData = 8;
+		} else if (TestCaseName.equalsIgnoreCase(objTestData.getCellData("TestCaseData", "TestCaseName", 9))) {
+			rowTestData = 9;
+		} else if (TestCaseName.equalsIgnoreCase(objTestData.getCellData("TestCaseData", "TestCaseName", 10))) {
+			rowTestData = 10;
+		} else if (TestCaseName.equalsIgnoreCase(objTestData.getCellData("TestCaseData", "TestCaseName", 11))) {
+			rowTestData = 11;
+		} else if (TestCaseName.equalsIgnoreCase(objTestData.getCellData("TestCaseData", "TestCaseName", 12))) {
+			rowTestData = 12;
+		} else if (TestCaseName.equalsIgnoreCase(objTestData.getCellData("TestCaseData", "TestCaseName", 13))) {
+			rowTestData = 13;
+		} else if (TestCaseName.equalsIgnoreCase(objTestData.getCellData("TestCaseData", "TestCaseName", 14))) {
+			rowTestData = 14;
+		} else if (TestCaseName.equalsIgnoreCase(objTestData.getCellData("TestCaseData", "TestCaseName", 15))) {
+			rowTestData = 15;
+		} else if (TestCaseName.equalsIgnoreCase(objTestData.getCellData("TestCaseData", "TestCaseName", 16))) {
+			rowTestData = 16;
+		} else if (TestCaseName.equalsIgnoreCase(objTestData.getCellData("TestCaseData", "TestCaseName", 17))) {
+			rowTestData = 17;
+		} else if (TestCaseName.equalsIgnoreCase(objTestData.getCellData("TestCaseData", "TestCaseName", 18))) {
+			rowTestData = 18;
+		} else if (TestCaseName.equalsIgnoreCase(objTestData.getCellData("TestCaseData", "TestCaseName", 19))) {
+			rowTestData = 19;
+		} else if (TestCaseName.equalsIgnoreCase(objTestData.getCellData("TestCaseData", "TestCaseName", 20))) {
+			rowTestData = 20;
+		} else if (TestCaseName.equalsIgnoreCase(objTestData.getCellData("TestCaseData", "TestCaseName", 21))) {
+			rowTestData = 21;
+		} else if (TestCaseName.equalsIgnoreCase(objTestData.getCellData("TestCaseData", "TestCaseName", 22))) {
+			rowTestData = 22;
+		} else if (TestCaseName.equalsIgnoreCase(objTestData.getCellData("TestCaseData", "TestCaseName", 23))) {
+			rowTestData = 23;
+		} else if (TestCaseName.equalsIgnoreCase(objTestData.getCellData("TestCaseData", "TestCaseName", 24))) {
+			rowTestData = 24;
+		} else if (TestCaseName.equalsIgnoreCase(objTestData.getCellData("TestCaseData", "TestCaseName", 25))) {
+			rowTestData = 25;
+		} else if (TestCaseName.equalsIgnoreCase(objTestData.getCellData("TestCaseData", "TestCaseName", 26))) {
+			rowTestData = 26;
+		} else if (TestCaseName.equalsIgnoreCase(objTestData.getCellData("TestCaseData", "TestCaseName", 27))) {
+			rowTestData = 27;
+		} else if (TestCaseName.equalsIgnoreCase(objTestData.getCellData("TestCaseData", "TestCaseName", 28))) {
+			rowTestData = 28;
+		} else if (TestCaseName.equalsIgnoreCase(objTestData.getCellData("TestCaseData", "TestCaseName", 29))) {
+			rowTestData = 29;
+		} else if (TestCaseName.equalsIgnoreCase(objTestData.getCellData("TestCaseData", "TestCaseName", 30))) {
+			rowTestData = 30;
+		} else if (TestCaseName.equalsIgnoreCase(objTestData.getCellData("TestCaseData", "TestCaseName", 31))) {
+			rowTestData = 31;
+		} else if (TestCaseName.equalsIgnoreCase(objTestData.getCellData("TestCaseData", "TestCaseName", 32))) {
+			rowTestData = 32;
+		} else if (TestCaseName.equalsIgnoreCase(objTestData.getCellData("TestCaseData", "TestCaseName", 33))) {
+			rowTestData = 33;
+		} else if (TestCaseName.equalsIgnoreCase(objTestData.getCellData("TestCaseData", "TestCaseName", 34))) {
+			rowTestData = 34;
+		} else if (TestCaseName.equalsIgnoreCase(objTestData.getCellData("TestCaseData", "TestCaseName", 35))) {
+			rowTestData = 35;
+		} else if (TestCaseName.equalsIgnoreCase(objTestData.getCellData("TestCaseData", "TestCaseName", 36))) {
+			rowTestData = 36;
+		} else if (TestCaseName.equalsIgnoreCase(objTestData.getCellData("TestCaseData", "TestCaseName", 37))) {
+			rowTestData = 37;
+		} else if (TestCaseName.equalsIgnoreCase(objTestData.getCellData("TestCaseData", "TestCaseName", 38))) {
+			rowTestData = 38;
+		} else if (TestCaseName.equalsIgnoreCase(objTestData.getCellData("TestCaseData", "TestCaseName", 39))) {
+			rowTestData = 39;
+		} else if (TestCaseName.equalsIgnoreCase(objTestData.getCellData("TestCaseData", "TestCaseName", 40))) {
+			rowTestData = 40;
+		} else if (TestCaseName.equalsIgnoreCase(objTestData.getCellData("TestCaseData", "TestCaseName", 41))) {
+			rowTestData = 41;
+		} else if (TestCaseName.equalsIgnoreCase(objTestData.getCellData("TestCaseData", "TestCaseName", 42))) {
+			rowTestData = 42;
+		} else if (TestCaseName.equalsIgnoreCase(objTestData.getCellData("TestCaseData", "TestCaseName", 43))) {
+			rowTestData = 43;
+		} else if (TestCaseName.equalsIgnoreCase(objTestData.getCellData("TestCaseData", "TestCaseName", 44))) {
+			rowTestData = 44;
+		} else if (TestCaseName.equalsIgnoreCase(objTestData.getCellData("TestCaseData", "TestCaseName", 45))) {
+			rowTestData = 45;
+		}
+		
+		return rowTestData;
+		
+}
 	
 	/*
 	public ArrayList<String> getDataFromExcel(String abc) throws IOException {
