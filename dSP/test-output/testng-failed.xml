@@ -5,7 +5,7 @@
     <classes>
       <class name="E2ETestCases.dSP.regression">
         <methods>
-          <include name="SuccessfulOrderexecutionSingleCommand_XMLRequest"/>
+          <include name="FailedOrderexecutionSingleCommand_InvalidCommandURL_XMLDevice"/>
         </methods>
       </class> <!-- E2ETestCases.dSP.regression -->
     </classes>

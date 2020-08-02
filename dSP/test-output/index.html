@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\Viral\AppData\Local\Temp\testng-eclipse--1269172814\testng-customsuite.xml</span>
+                    <span>C:\Users\Viral\AppData\Local\Temp\testng-eclipse--1228604735\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="E2ETestCases.dSP.regression" hash-for-method="SuccessfulOrderexecutionSingleCommand_XMLRequest">SuccessfulOrderexecutionSingleCommand_XMLRequest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="E2ETestCases.dSP.regression" hash-for-method="FailedOrderexecutionSingleCommand_InvalidCommandURL_XMLDevice">FailedOrderexecutionSingleCommand_InvalidCommandURL_XMLDevice</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -125,17 +125,18 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="SuccessfulOrderexecutionSingleCommand_XMLRequest">
-                  </a> <!-- SuccessfulOrderexecutionSingleCommand_XMLRequest -->
-                  <span class="method-name">SuccessfulOrderexecutionSingleCommand_XMLRequest</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
-from disconnected: received Inspector.detached event
+                  <a name="FailedOrderexecutionSingleCommand_InvalidCommandURL_XMLDevice">
+                  </a> <!-- FailedOrderexecutionSingleCommand_InvalidCommandURL_XMLDevice -->
+                  <span class="method-name">FailedOrderexecutionSingleCommand_InvalidCommandURL_XMLDevice</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//*[text()=&apos;OK&apos;])&quot;}
   (Session info: chrome=79.0.3945.88)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-81BPFCL&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
+System info: host: &apos;DESKTOP-81BPFCL&apos;, ip: &apos;10.212.136.14&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\Viral\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50373}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 3b83a1e4201c47d2edbcf47cbe3c5fe5
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\Viral\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:49318}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 42a2442d3df1ecf6225d844387a786ec
+*** Element info: {Using=xpath, value=(//*[text()=&apos;OK&apos;])}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -146,10 +147,13 @@ Session ID: 3b83a1e4201c47d2edbcf47cbe3c5fe5
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
-	at com.resources.base.initializer(base.java:31)
-	at reusableMethods.Utilities.loginMethod(Utilities.java:33)
-	at E2ETestCases.dSP.regression.SuccessfulOrderexecutionSingleCommand_XMLRequest(regression.java:86)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.pageobjects.CommandListPage.getOKBtn(CommandListPage.java:93)
+	at com.reusableComponents.CommandListMethods.activateReactivateCommand(CommandListMethods.java:88)
+	at E2ETestCases.dSP.regression.FailedOrderexecutionSingleCommand_InvalidCommandURL_XMLDevice(regression.java:299)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -180,8 +184,6 @@ Session ID: 3b83a1e4201c47d2edbcf47cbe3c5fe5
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 
 </div> <!-- stack-trace -->
-                  <em>
-(TestOne_TestNGProject)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -189,7 +191,7 @@ Session ID: 3b83a1e4201c47d2edbcf47cbe3c5fe5
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Viral\AppData\Local\Temp\testng-eclipse--1269172814\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Viral\AppData\Local\Temp\testng-eclipse--1228604735\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -240,14 +242,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'SuccessfulOrderexecutionSingleCommand_XMLRequest')
+data.setCell(0, 1, 'FailedOrderexecutionSingleCommand_InvalidCommandURL_XMLDevice')
 data.setCell(0, 2, 'E2ETestCases.dSP.regression')
-data.setCell(0, 3, 9137);
+data.setCell(0, 3, 122082);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 9 seconds</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -262,29 +264,97 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">9 ignored methods</span>
+            <span class="header-content">43 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
               <span class="ignored-class-name">E2ETestCases.dSP.regression</span>
               <div class="ignored-methods-div">
+                <span class="ignored-method-name">FailedNBOrderRequest_DuplicateOrderID_JMSXML</span>
+                <br/>
                 <span class="ignored-method-name">FailedOrderexecutionSingleCommand_InvalidInput_XMLDevice</span>
                 <br/>
-                <span class="ignored-method-name">Test1</span>
+                <span class="ignored-method-name">FailedNBOrderRequest_InvalidData_RestAsync_JSON</span>
+                <br/>
+                <span class="ignored-method-name">FailedNBOrderRequest_SyntaticalErrors_RestAsync_JSON</span>
+                <br/>
+                <span class="ignored-method-name">FailedNBOrderRequest_InvalidRequest_RestAsync_JSON</span>
+                <br/>
+                <span class="ignored-method-name">FailedNBOrderRequest_DuplicateOrderID_RestAsync_JSON</span>
                 <br/>
                 <span class="ignored-method-name">FailedOrderexecutionSingleCommand_InvalidInput_JSONDevice</span>
                 <br/>
+                <span class="ignored-method-name">PastScheduledproperty_NBOrderRequest_RestAsync_JSON</span>
+                <br/>
+                <span class="ignored-method-name">FailedNBOrderRequest_SyntacticalErrors_JMSXML</span>
+                <br/>
+                <span class="ignored-method-name">FailedNBOrderRequest_InvalidRequest_JMSJSON_SBDevice_SOAP</span>
+                <br/>
+                <span class="ignored-method-name">SuccessfulNBOrderRequest_RESTASYNCXML</span>
+                <br/>
+                <span class="ignored-method-name">FailedNBOrderRequest_IncorrectCommandURL_RestAsync_JSON</span>
+                <br/>
+                <span class="ignored-method-name">SuccessfulNBOrderRequest_RESTASYNCJSON_SBDevice_SOAP</span>
+                <br/>
+                <span class="ignored-method-name">FailedNBOrderRequest_IncorrectProvisioningURL_JMSXML</span>
+                <br/>
+                <span class="ignored-method-name">Test1</span>
+                <br/>
+                <span class="ignored-method-name">SuccessfulNBOrderRequest_RESTASYNCJSON</span>
+                <br/>
                 <span class="ignored-method-name">FailedOrderexecutionSingleCommand_InvalidProvisioningURL_XMLDevice</span>
                 <br/>
-                <span class="ignored-method-name">FailedOrderexecutionSingleCommand_InvalidProvisioningURL_JSONDevice</span>
+                <span class="ignored-method-name">SuccessfulNBOrderRequest_JMSXML</span>
                 <br/>
                 <span class="ignored-method-name">SuccessfulOrderexecutionSingleCommand_JSONRequest</span>
+                <br/>
+                <span class="ignored-method-name">FailedNBOrderRequest_InvalidRequest_JMSXML_SBDevice_SOAP</span>
+                <br/>
+                <span class="ignored-method-name">SuccessfulNBOrderRequest_RESTASYNCXML_SBDevice_SOAP</span>
+                <br/>
+                <span class="ignored-method-name">PastScheduledproperty_NBOrderRequest_RestAsync_XML</span>
+                <br/>
+                <span class="ignored-method-name">FailedNBOrderRequest_WithoutOrderID_RestAsync_JSON</span>
+                <br/>
+                <span class="ignored-method-name">FailedNBOrderRequest_InvalidRequest_JMSXML</span>
+                <br/>
+                <span class="ignored-method-name">SuccessfulNBOrderRequest_JMSJSON</span>
+                <br/>
+                <span class="ignored-method-name">FailedNBOrderRequest_InvalidData_RestAsync_XML</span>
+                <br/>
+                <span class="ignored-method-name">FailedOrderexecutionSingleCommand_InvalidProvisioningURL_JSONDevice</span>
                 <br/>
                 <span class="ignored-method-name">Test2</span>
                 <br/>
                 <span class="ignored-method-name">FailedOrderexecutionSingleCommand_InvalidCommandURL_JSONDevice</span>
                 <br/>
-                <span class="ignored-method-name">FailedOrderexecutionSingleCommand_InvalidCommandURL_XMLDevice</span>
+                <span class="ignored-method-name">FailedNBOrderRequest_IncorrectProvisioningURL_RestAsync_JSON</span>
+                <br/>
+                <span class="ignored-method-name">FailedNBOrderRequest_SyntaticalErrors_RestAsync_XML</span>
+                <br/>
+                <span class="ignored-method-name">FailedNBOrderRequest_SyntaticalErrors_JMSJSON</span>
+                <br/>
+                <span class="ignored-method-name">SuccessfulNBOrderRequest_JMSXML_SBDevice_SOAP</span>
+                <br/>
+                <span class="ignored-method-name">FailedNBOrderRequest_WithoutOrderID_JMSXML</span>
+                <br/>
+                <span class="ignored-method-name">FailedNBOrderRequest_InvalidRequest_JMSJSON</span>
+                <br/>
+                <span class="ignored-method-name">FailedNBOrderRequest_InvalidRequest_RestAsync_JSON_SBDevice_SOAP</span>
+                <br/>
+                <span class="ignored-method-name">FailedNBOrderRequest_InvalidData_JMSXML</span>
+                <br/>
+                <span class="ignored-method-name">FailedNBOrderRequest_InvalidRequest_RestAsync_XML_SBDevice_SOAP</span>
+                <br/>
+                <span class="ignored-method-name">FailedNBOrderRequest_IncorrectCommandURL_JMSXML</span>
+                <br/>
+                <span class="ignored-method-name">FailedNBOrderRequest_InvalidData_JMSJSON</span>
+                <br/>
+                <span class="ignored-method-name">SuccessfulNBOrderRequest_JMSJSON_SBDevice_SOAP</span>
+                <br/>
+                <span class="ignored-method-name">FailedNBOrderRequest_InvalidRequest_RestAsync_XML</span>
+                <br/>
+                <span class="ignored-method-name">SuccessfulOrderexecutionSingleCommand_XMLRequest</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -300,7 +370,7 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">SuccessfulOrderexecutionSingleCommand_XMLRequest</span>
+                <span class="method-name">FailedOrderexecutionSingleCommand_InvalidCommandURL_XMLDevice</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
