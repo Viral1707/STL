@@ -40,6 +40,9 @@ public class nbReqTrackDetailsMethods extends base {
 		Thread.sleep(5000);
 		Utilities.highlight(nbReqTrackObj.getSearchBtn());
 		nbReqTrackObj.getSearchBtn().click();
+		Thread.sleep(5000);
+		Utilities.highlight(nbReqTrackObj.getSearchBtn());
+		nbReqTrackObj.getSearchBtn().click();
 		return driver;
 
 	}
@@ -120,6 +123,26 @@ public class nbReqTrackDetailsMethods extends base {
 		Utilities.highlight(nbReqTrackObj.getStatus());
 		String statusNBReq = nbReqTrackObj.getStatus().getText();
 		Assert.assertEquals("In Progress", statusNBReq);
+		return driver;
+
+	}
+	
+	
+	
+	public WebDriver searchWithSBIMSI(WebDriver driver, int row) throws InterruptedException {
+
+		Xls_Reader inputValues = new Xls_Reader(
+				".\\src\\main\\java\\com\\testdata\\InputValuesForDSP.xlsx");
+
+		
+		Utilities.highlight(nbReqTrackObj.getServiceOrderID());
+		nbReqTrackObj.getIMSI().clear();
+		nbReqTrackObj.getIMSI().sendKeys(objTestData.getCellData("TestCaseData", "sb_imsi", row));
+		Utilities.highlight(nbReqTrackObj.getSearchBtn());
+		nbReqTrackObj.getSearchBtn().click();
+		Thread.sleep(5000);
+		Utilities.highlight(nbReqTrackObj.getSearchBtn());
+		nbReqTrackObj.getSearchBtn().click();
 		return driver;
 
 	}

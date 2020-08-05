@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="E2ETestCases.dSP.regression">
+      <class name="E2ETestCases.dSP.regression_One">
         <methods>
-          <include name="FailedOrderexecutionSingleCommand_InvalidCommandURL_XMLDevice"/>
+          <include name="PastScheduledproperty_NBOrderRequest_RestAsync_JSON"/>
         </methods>
-      </class> <!-- E2ETestCases.dSP.regression -->
+      </class> <!-- E2ETestCases.dSP.regression_One -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

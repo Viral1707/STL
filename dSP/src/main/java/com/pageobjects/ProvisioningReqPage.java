@@ -25,6 +25,12 @@ public class ProvisioningReqPage extends base {
 	public WebElement getProReqStatus() {
 		return driver.findElement(proReqStatus);
 	}
+	
+	By statusDeviceCommunicationFailure = By.xpath(readerXpath.getCellData("ProvisioningReq", "detail", 3));
+
+	public WebElement getStatusDeviceCommunicationFailure() {
+		return driver.findElement(statusDeviceCommunicationFailure);
+	}
 
 
 }

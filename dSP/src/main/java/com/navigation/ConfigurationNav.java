@@ -33,5 +33,17 @@ public class ConfigurationNav extends base {
 		return driver;
 	}
 	
+	
+	public WebDriver navigateConfigSystemPara(WebDriver driver) throws InterruptedException {
+
+		ConfigurationPage cP = new ConfigurationPage(driver);
+		Actions action = new Actions(driver);
+		Utilities.highlight(cP.getSystemAdministrationMainMenu());
+		action.moveToElement(cP.getSystemAdministrationMainMenu()).build().perform();
+		Utilities.highlight(cP.getConfigSystemParaMenu());
+		cP.getConfigSystemParaMenu().click();
+		return driver;
+	}
+	
 
 }

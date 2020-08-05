@@ -42,5 +42,26 @@ public class UpdateCommandPage extends base {
 	public WebElement getOKBtn() {
 		return driver.findElement(OKBtn);
 	}
+	
+	By enableRadioBtn = By.xpath(readerXpath.getCellData("EditSBDeviceDetails", "detail", 6));
+
+	public WebElement getEnableRadioBtn() {
+		return driver.findElement(enableRadioBtn);
+	}
+	
+	
+	By disableRadioBtn = By.xpath(readerXpath.getCellData("EditSBDeviceDetails", "detail", 7));
+
+	public WebElement getDisableRadioBtn() {
+		return driver.findElement(disableRadioBtn);
+	}
+	
+	
+	By loopbackResponse = By.xpath(readerXpath.getCellData("EditSBDeviceDetails", "detail", 8));
+
+	public WebElement getLoopbackResponse() {
+		return driver.findElement(loopbackResponse);
+	}
+	
 
 }

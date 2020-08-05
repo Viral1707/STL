@@ -42,5 +42,11 @@ public class ConfigurationPage extends base {
 	public WebElement getReloadCacheOptionMenu() {
 		return driver.findElement(reloadCacheOptionMenu);
 	}
+	
+	By configSystemParaMenu = By.xpath(readerXpath.getCellData("Configuration", "detail", 7));
+
+	public WebElement getConfigSystemParaMenu() {
+		return driver.findElement(configSystemParaMenu);
+	}
 
 }

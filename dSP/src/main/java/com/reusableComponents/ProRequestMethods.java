@@ -50,9 +50,9 @@ public class ProRequestMethods extends base {
 	public WebDriver verifyProReqRespStatusAsDeviceCommunicationfailure(WebDriver driver, int row) {
 
 		ProvisioningReqPage objProReqPage = new ProvisioningReqPage(driver);
-		Utilities.highlight(objProReqPage.getProReqStatus());
-		String statusProReq = objProReqPage.getProReqStatus().getText();
-		Assert.assertEquals(statusProReq,objTestData.getCellData("TestCaseData", "ProvisioningRequestStatus", row));
+		Utilities.highlight(objProReqPage.getStatusDeviceCommunicationFailure());
+		String statusDCF = objProReqPage.getStatusDeviceCommunicationFailure().getText();
+		Assert.assertEquals(statusDCF,objTestData.getCellData("TestCaseData", "ProvisioningRequestStatus", row));
 		return driver;
 
 	}

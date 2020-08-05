@@ -15,6 +15,7 @@ import com.excel.utility.Xls_Reader;
 public class base {
 
 	protected static WebDriver driver;
+	public static ThreadLocal<WebDriver> tdriver = new ThreadLocal<WebDriver>();
 	
 	public void failed(WebDriver driver) {
 		File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
@@ -54,9 +55,14 @@ public class base {
 		 */
 
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		return driver;
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		tdriver.set(driver);
+		return getDriver();
 
+	}
+	
+	public static synchronized WebDriver getDriver() {
+		return tdriver.get();
 	}
 	
 	

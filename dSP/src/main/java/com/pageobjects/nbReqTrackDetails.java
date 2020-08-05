@@ -74,6 +74,11 @@ public class nbReqTrackDetails extends base {
 		return driver.findElement(NBReqResponseLink);
 	}
 	
+	By IMSI = By.xpath(readerXpath.getCellData("NBReqTrackingDetails", "detail", 11));
+
+	public WebElement getIMSI() {
+		return driver.findElement(IMSI);
+	}
 	
 	
 }

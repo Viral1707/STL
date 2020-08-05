@@ -46,16 +46,13 @@ public class NBSimulatorAddRequestMethods extends base {
 	public WebDriver provideDataType(WebDriver driver, int row) throws InterruptedException {
 
 		objNBSAR.getDataType().click();
-		
+
 		List<WebElement> dataTypeList = objNBSAR.getDataTypeList();
 		System.out.println("DataType List Size" + dataTypeList.size());
 		int z;
 		for (z = 0; z < dataTypeList.size(); z++) {
 			Utilities.highlight(dataTypeList.get(z));
-			System.out.println(dataTypeList.get(z));
 			String Value_dataTypeList = dataTypeList.get(z).getText().trim();
-			System.out.println(Value_dataTypeList);
-			System.out.println("Excel Data : " + objTestData.getCellData("TestCaseData", "DataType", row));
 			if (Value_dataTypeList.equals(objTestData.getCellData("TestCaseData", "DataType", row))) {
 				System.out.println(dataTypeList.get(z));
 				Utilities.highlight(dataTypeList.get(z));
@@ -71,7 +68,7 @@ public class NBSimulatorAddRequestMethods extends base {
 	public WebDriver provideQueue(WebDriver driver, int row) throws InterruptedException {
 
 		objNBSAR.getQueueList().click();
-		
+
 		List<WebElement> queueList = objNBSAR.getQueueListList();
 
 		int z;
@@ -91,7 +88,7 @@ public class NBSimulatorAddRequestMethods extends base {
 	}
 
 	public void addNBRequestInSystem(WebDriver driver, int row) throws InterruptedException {
-		
+
 		System.out.println(objTestData.getCellData("TestCaseData", "RequestType", row));
 
 		if (objTestData.getCellData("TestCaseData", "RequestType", row).equals("JMS")) {
@@ -118,15 +115,11 @@ public class NBSimulatorAddRequestMethods extends base {
 
 	public WebDriver checkSyntaticalError(WebDriver driver) {
 
-		Utilities.highlight(objNBSAR.getSyntaticalError());
-		
 		String syntaticalError = objNBSAR.getSyntaticalError().getText();
 		Assert.assertEquals(syntaticalError, "Please add valid data as per the Data Type.");
-		
+
 		return driver;
 
 	}
-	
-	
-	
+
 }
