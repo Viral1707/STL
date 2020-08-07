@@ -1,3 +1,5 @@
-2020-08-04 17:54:30,371  INFO [main] Utilities:1578 - Past Scheduled property_NB Order Request_Rest Async_JSON
-2020-08-04 17:54:46,566  INFO [main] Utilities:44 - Login successfully
-2020-08-04 17:55:27,921  INFO [main] Utilities:1605 - Successfully Tested
+2020-08-06 18:52:00,733  INFO [main] Utilities:67 - Successful Order execution_Single Command_XML Request
+2020-08-06 18:52:21,714  INFO [main] Utilities:44 - Login successfully
+2020-08-06 18:53:28,889  INFO [main] Utilities:475 - Failed NB Order Request_Invalid Request_JMS JSON
+2020-08-06 18:53:43,939  INFO [main] Utilities:44 - Login successfully
+2020-08-06 18:54:21,377  INFO [main] Utilities:500 - Successfully Tested

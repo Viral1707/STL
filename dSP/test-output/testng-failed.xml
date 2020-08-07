@@ -5,7 +5,7 @@
     <classes>
       <class name="E2ETestCases.dSP.regression_One">
         <methods>
-          <include name="PastScheduledproperty_NBOrderRequest_RestAsync_JSON"/>
+          <include name="SuccessfulOrderexecutionSingleCommand_XMLRequest"/>
         </methods>
       </class> <!-- E2ETestCases.dSP.regression_One -->
     </classes>

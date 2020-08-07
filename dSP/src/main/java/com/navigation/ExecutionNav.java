@@ -10,10 +10,13 @@ import reusableMethods.Utilities;
 
 public class ExecutionNav extends base {
 
+	
+	
+	
 	public WebDriver navigateToSingleCommandExecution(WebDriver driver) throws InterruptedException {
 
 		ExecutionPage eP = new ExecutionPage(driver);
-		Actions action = new Actions(driver);
+		Actions action = new Actions(driver);	
 		Utilities.highlight(eP.getSingleCommandExecutionMainMenu());
 		action.moveToElement(eP.getSingleCommandExecutionMainMenu()).build().perform();
 		Utilities.highlight(eP.getSingleCommandExecutionOption());
@@ -22,7 +25,7 @@ public class ExecutionNav extends base {
 	}
 	
 	public WebDriver navigateToNonCreatedNBOrders(WebDriver driver) throws InterruptedException {
-
+		
 		ExecutionPage eP = new ExecutionPage(driver);
 		Actions action = new Actions(driver);
 		Utilities.highlight(eP.getManageNonCreatedOrders());
@@ -33,7 +36,7 @@ public class ExecutionNav extends base {
 	}
 	
 	public WebDriver navigateToNBSimulators(WebDriver driver) throws InterruptedException {
-
+		
 		ExecutionPage eP = new ExecutionPage(driver);
 		Actions action = new Actions(driver);
 		Utilities.highlight(eP.getNBSimulatorMainMenu());
@@ -44,7 +47,7 @@ public class ExecutionNav extends base {
 	}
 	
 	public WebDriver navigateToInvokeNonCreatedNBOrders(WebDriver driver) throws InterruptedException {
-
+		
 		ExecutionPage eP = new ExecutionPage(driver);
 		Actions action = new Actions(driver);
 		Utilities.highlight(eP.getManageNonCreatedOrders());
@@ -53,5 +56,27 @@ public class ExecutionNav extends base {
 		eP.getInvokeNonCreatedNBOrders().click();
 		return driver;
 	}
+	
+	public WebDriver navigateToTestProcessFlowExecutionPage(WebDriver driver) throws InterruptedException {
+		
+		ExecutionPage eP = new ExecutionPage(driver);
+		Actions action = new Actions(driver);
+		Utilities.highlight(eP.getTestCategory());
+		action.moveToElement(eP.getTestCategory()).build().perform();
+		Utilities.highlight(eP.getTestProcessFlow());
+		eP.getTestProcessFlow().click();
+		return driver;
+	}
 
+	public WebDriver navigateToTestProcessFlowJsonExecutionPage(WebDriver driver) throws InterruptedException {
+		
+		ExecutionPage eP = new ExecutionPage(driver);
+		Actions action = new Actions(driver);
+		Utilities.highlight(eP.getTestCategory());
+		action.moveToElement(eP.getTestCategory()).build().perform();
+		Utilities.highlight(eP.getTestProcessFlowJSON());
+		eP.getTestProcessFlowJSON().click();
+		return driver;
+	}
+	
 }

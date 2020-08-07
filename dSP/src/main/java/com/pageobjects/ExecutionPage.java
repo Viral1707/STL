@@ -56,8 +56,23 @@ public class ExecutionPage extends base {
 		return driver.findElement(NBSImulatorOption);
 	}
 	
-	By ManageNonCreatedOrders = By.xpath(readerXpath.getCellData("Execution", "detail", 10));
+	By TestCategory = By.xpath(readerXpath.getCellData("Execution", "detail", 11));
 
+	public WebElement getTestCategory() {
+		return driver.findElement(TestCategory);
+	}
+	
+	By TestProcessFlow = By.xpath(readerXpath.getCellData("Execution", "detail", 12));
+
+	public WebElement getTestProcessFlow() {
+		return driver.findElement(TestProcessFlow);
+	}
+	
+	By TestProcessFlowJSON = By.xpath(readerXpath.getCellData("Execution", "detail", 13));
+
+	public WebElement getTestProcessFlowJSON() {
+		return driver.findElement(TestProcessFlow);
+	}
 	
 	
 }
